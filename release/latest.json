@@ -1,8 +1,8 @@
 {
-  "tag": "v1.3.42",
-  "title": "交警信息提醒 1.3.42",
-  "versionCode": 54,
-  "apkUrl": "https://aka.doubaocdn.com/s/hp2oHFgzRV",
-  "apkName": "12123sms-1.3.42.apk",
-  "notes": "versionCode: 54\n\n1.3.42\n\n- 修复在线升级「下载失败」：Release 资产直链（github.com → objects.githubusercontent.com）在国内网络经常连不通，现在下载会自动回退到 CDN 直链，不开代理也能下。\n- 下载改为自己跟随跳转（最多 6 跳），超时放宽到连接 20s / 读取 60s，不再依赖 HttpURLConnection 的自动跳转。\n- 下载失败时会把真实原因（HTTP 403 / 连接超时 / 下载内容为空）显示在状态里，不再是笼统的一句「下载失败」。\n- 安装包签名不变，可直接覆盖旧版本安装。"
+  "tag": "v1.3.43",
+  "title": "交警信息提醒 1.3.43",
+  "versionCode": 55,
+  "apkUrl": "https://aka.doubaocdn.com/s/rfYLlkUHko",
+  "apkName": "12123sms-1.3.43.apk",
+  "notes": "versionCode: 55\n\n1.3.43\n\n- 设置页「检查升级」卡片移到「设置」大标题正下方，升级入口不再翻到页面最底部。\n- 卡片自带「使用说明」按钮和「检查更新」按钮，位置调整后其余设置项顺序不变。\n- 安装包签名不变，可直接覆盖旧版本安装。"
 }
