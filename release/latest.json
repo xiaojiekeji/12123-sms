@@ -1,8 +1,8 @@
 {
-  "tag": "v1.3.40",
-  "title": "交警信息提醒 1.3.40",
-  "versionCode": 52,
-  "apkUrl": "https://aka.doubaocdn.com/s/2StLLzehLO",
-  "apkName": "12123sms-1.3.40.apk",
-  "notes": "versionCode: 52\n\n1.3.40\n\n- 首页删掉「当前触发号码」卡片，号码统一在自定义页管理（首页更紧凑）。\n- 自定义页小标题由「触发号码」改为「当前触发号码」。\n- 首页「最近一次触发」已改为与记录页一致的卡片样式（时间 / 电话 / 发件人 / 短信内容）。\n- 安装包签名不变，可直接覆盖旧版本安装。"
+  "tag": "v1.3.41",
+  "title": "交警信息提醒 1.3.41",
+  "versionCode": 53,
+  "apkUrl": "https://aka.doubaocdn.com/s/YIjq4sqUQd",
+  "apkName": "12123sms-1.3.41.apk",
+  "notes": "versionCode: 53\n\n1.3.41\n\n- 默认铃声换成内置音频（小毛驴之歌 1.5 倍狂飙版），打包在 APK 里，没导入自定义铃声时就用它，不再走系统默认闹钟。\n- 触发号码、触发记录、自定义铃声统一存到内置存储：Android/data/com.demo.smsalarm/files/data/（numbers.json / records.json / ringtone/），覆盖升级和重启都不会丢；万一应用数据被清，进应用会自动从该目录读回来。\n- 旧版本放在私有目录里的自定义铃声会自动搬到 data/ringtone，旧路径自动更新。\n- 安装包签名不变，可直接覆盖旧版本安装（包体因内置音频增大到约 7MB）。"
 }
