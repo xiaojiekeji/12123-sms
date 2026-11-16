@@ -1,0 +1,51 @@
+name: publish-release
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'release/latest.json'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: 解析清单
+        id: meta
+        run: |
+          python3 - <<'PY'
+          import json, os
+          d = json.load(open('release/latest.json', encoding='utf-8'))
+          with open(os.environ['GITHUB_OUTPUT'], 'a', encoding='utf-8') as f:
+              f.write(f"tag={d['tag']}\n")
+              f.write(f"title={d['title']}\n")
+              f.write(f"apk_url={d['apkUrl']}\n")
+              f.write(f"apk_name={d['apkName']}\n")
+          with open('release_notes.md', 'w', encoding='utf-8') as f:
+              f.write(d['notes'])
+          PY
+
+      - name: 下载 APK
+        run: |
+          curl -sSL --retry 3 --retry-delay 2 -o "${{ steps.meta.outputs.apk_name }}" "${{ steps.meta.outputs.apk_url }}"
+          ls -l "${{ steps.meta.outputs.apk_name }}"
+
+      - name: 发布或更新 Release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TAG: ${{ steps.meta.outputs.tag }}
+          TITLE: ${{ steps.meta.outputs.title }}
+          APK: ${{ steps.meta.outputs.apk_name }}
+        run: |
+          if gh release view "$TAG" >/dev/null 2>&1; then
+            gh release upload "$TAG" "$APK" --clobber
+            gh release edit "$TAG" --title "$TITLE" --notes-file release_notes.md
+          else
+            gh release create "$TAG" "$APK" --title "$TITLE" --notes-file release_notes.md
+          fi
