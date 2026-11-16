@@ -4,5 +4,5 @@
   "versionCode": 54,
   "apkUrl": "https://aka.doubaocdn.com/s/hp2oHFgzRV",
   "apkName": "12123sms-1.3.42.apk",
-  "notes": "versionCode: 54\n\n1.3.42\n\n- 修复「能检测到新版本但点立即升级提示下载失败」：下载不再依赖 HttpURLConnection 自动跳转，改为自己逐级跟随 302（GitHub 会跳到 objects.githubusercontent.com，部分运营商网络连这个域名不通）。\n- 增加备选下载源：Release 资产直链取不到时，自动改用 release/latest.json 里的 CDN 直链再试一次，两个源都失败才报错。\n- 下载失败会直接显示原因（HTTP 403 / 连接超时 / 跳转地址为空 等），不再只说「下载失败」。\n- 读取超时从 20 秒放宽到 60 秒，适配慢速网络下 7MB 的包体。\n- 安装包签名不变，可直接覆盖旧版本安装。"
+  "notes": "versionCode: 54\n\n1.3.42\n\n- 修复在线升级「下载失败」：Release 资产直链（github.com → objects.githubusercontent.com）在国内网络经常连不通，现在下载会自动回退到 CDN 直链，不开代理也能下。\n- 下载改为自己跟随跳转（最多 6 跳），超时放宽到连接 20s / 读取 60s，不再依赖 HttpURLConnection 的自动跳转。\n- 下载失败时会把真实原因（HTTP 403 / 连接超时 / 下载内容为空）显示在状态里，不再是笼统的一句「下载失败」。\n- 安装包签名不变，可直接覆盖旧版本安装。"
 }
