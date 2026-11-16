@@ -1,8 +1,8 @@
 {
-  "tag": "v1.3.43",
-  "title": "交警信息提醒 1.3.43",
-  "versionCode": 55,
-  "apkUrl": "https://aka.doubaocdn.com/s/rfYLlkUHko",
-  "apkName": "12123sms-1.3.43.apk",
-  "notes": "versionCode: 55\n\n1.3.43\n\n- 设置页「检查升级」卡片移到「设置」大标题正下方，升级入口不再翻到页面最底部。\n- 卡片自带「使用说明」按钮和「检查更新」按钮，位置调整后其余设置项顺序不变。\n- 安装包签名不变，可直接覆盖旧版本安装。"
+  "tag": "v1.3.44",
+  "title": "交警信息提醒 1.3.44",
+  "versionCode": 56,
+  "apkUrl": "https://aka.doubaocdn.com/s/slEbVYVDyY",
+  "apkName": "12123sms-1.3.44.apk",
+  "notes": "versionCode: 56\napkMirror: https://aka.doubaocdn.com/s/slEbVYVDyY\n\n1.3.44\n\n- 修复未挂代理时「下载失败」：上一版虽然写了 CDN 兜底，但镜地址要从 raw.githubusercontent.com 读，这个域名在国内同样连不上，所以兜底也没生效。\n- 现在国内镜像地址直接写在 Release 正文（apkMirror 行），App 从 api.github.com 读到后优先走 CDN 下载，github.com 资产直链才变成备选。\n- 备用清单通道改用 jsDelivr（cdn.jsdelivr.net/gh/...），raw.githubusercontent.com 降为最后兑底。\n- 安装包签名不变，可直接覆盖旧版本安装。"
 }
