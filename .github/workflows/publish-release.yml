@@ -5,6 +5,7 @@ on:
     branches: [ main ]
     paths:
       - 'release/latest.json'
+      - '.github/workflows/publish-release.yml'
   workflow_dispatch:
 
 permissions:
@@ -33,8 +34,14 @@ jobs:
 
       - name: 下载 APK
         run: |
-          curl -sSL --retry 3 --retry-delay 2 -o "${{ steps.meta.outputs.apk_name }}" "${{ steps.meta.outputs.apk_url }}"
-          ls -l "${{ steps.meta.outputs.apk_name }}"
+          set -e
+          URL="${{ steps.meta.outputs.apk_url }}"
+          OUT="${{ steps.meta.outputs.apk_name }}"
+          curl -sS -L --http1.1 --retry 5 --retry-delay 3 --retry-all-errors \
+            --connect-timeout 20 --max-time 600 -o "$OUT" "$URL" || \
+          curl -sS -L --http1.1 --retry 3 -o "$OUT" "$URL"
+          test -s "$OUT"
+          ls -l "$OUT"
 
       - name: 发布或更新 Release
         env:
