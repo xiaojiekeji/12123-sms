@@ -1,8 +1,8 @@
 {
-  "tag": "v1.5.1",
-  "title": "交警信息提醒 1.5.1",
-  "versionCode": 58,
-  "apkUrl": "https://aka.doubaocdn.com/s/i4yx4oKgdg",
-  "apkName": "jiaojing-1.5.1.apk",
-  "notes": "versionCode: 58\napkMirror: https://aka.doubaocdn.com/s/i4yx4oKgdg\n\n1.5.1\n\n- 响铃时长默认改为 300 秒（原来 60 秒），响铃期间循环重复播放你设置的铃声，不挂 VPN 也能在线更新。\n- 自定义时长仍可在自定义页填写，范围 5～600 秒，改完立即生效。\n- 安装包签名不变，可直接覆盖 1.5.0 及更早版本安装。"
+  "tag": "v1.5.2",
+  "title": "交警信息提醒 1.5.2",
+  "versionCode": 59,
+  "apkUrl": "https://aka.doubaocdn.com/s/e99vzY5I7D",
+  "apkName": "jiaojing-1.5.2.apk",
+  "notes": "versionCode: 59\napkMirror: https://aka.doubaocdn.com/s/e99vzY5I7D\n\n1.5.2\n\n- 首页「运行中」卡片：短信 / 通知使用权限 / 电池优化 / 进程保活 四项改为同一排四格，标签在上、状态在下，不再占两排。\n- 响铃时长默认 300 秒，响铃期间循环重播你设置的铃声。\n- 数据存放 Android/data/com.demo.smsalarm/files/data/，覆盖升级与重启都不丢。\n- 安装包签名不变，可直接覆盖 1.5.1 及更早版本安装。"
 }
