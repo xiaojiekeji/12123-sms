@@ -1,8 +1,8 @@
 {
-  "tag": "v1.5.2",
-  "title": "交警信息提醒 1.5.2",
-  "versionCode": 59,
-  "apkUrl": "https://aka.doubaocdn.com/s/e99vzY5I7D",
-  "apkName": "jiaojing-1.5.2.apk",
-  "notes": "versionCode: 59\napkMirror: https://aka.doubaocdn.com/s/e99vzY5I7D\n\n1.5.2\n\n- 首页「运行中」卡片：短信 / 通知使用权限 / 电池优化 / 进程保活 四项改为同一排四格，标签在上、状态在下，不再占两排。\n- 响铃时长默认 300 秒，响铃期间循环重播你设置的铃声。\n- 数据存放 Android/data/com.demo.smsalarm/files/data/，覆盖升级与重启都不丢。\n- 安装包签名不变，可直接覆盖 1.5.1 及更早版本安装。"
+  "tag": "v1.5.3",
+  "title": "交警信息提醒 1.5.3",
+  "versionCode": 60,
+  "apkUrl": "https://aka.doubaocdn.com/s/ZobA38pYRj",
+  "apkName": "jiaojing-1.5.3.apk",
+  "notes": "versionCode: 60\napkMirror: https://aka.doubaocdn.com/s/ZobA38pYRj\n\n1.5.3\n\n- 修复：底部原黑色系统区域（导航栏）改为跟随软件背景色 #F5F7FB，导航栏图标自动转深色，不再露出黑条。\n- 同时关掉系统的导航栏 / 状态栏强制对比度，部分 ROM 上不会再自动加深。\n- 首页四项权限保持同一排；响铃默认 300 秒循环播放。\n- 安装包签名不变，可直接覆盖 1.5.2 及更早版本安装。"
 }
