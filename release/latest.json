@@ -1,8 +1,8 @@
 {
-  "tag": "v1.5.3",
-  "title": "交警信息提醒 1.5.3",
-  "versionCode": 60,
-  "apkUrl": "https://aka.doubaocdn.com/s/ZobA38pYRj",
-  "apkName": "jiaojing-1.5.3.apk",
-  "notes": "versionCode: 60\napkMirror: https://aka.doubaocdn.com/s/ZobA38pYRj\n\n1.5.3\n\n- 修复：底部原黑色系统区域（导航栏）改为跟随软件背景色 #F5F7FB，导航栏图标自动转深色，不再露出黑条。\n- 同时关掉系统的导航栏 / 状态栏强制对比度，部分 ROM 上不会再自动加深。\n- 首页四项权限保持同一排；响铃默认 300 秒循环播放。\n- 安装包签名不变，可直接覆盖 1.5.2 及更早版本安装。"
+  "tag": "v1.5.4",
+  "title": "交警信息提醒 1.5.4",
+  "versionCode": 61,
+  "apkUrl": "https://aka.doubaocdn.com/s/rquTsGx57U",
+  "apkName": "jiaojing-1.5.4.apk",
+  "notes": "versionCode: 61\napkMirror: https://aka.doubaocdn.com/s/rquTsGx57U\n\n1.5.4\n\n- 首页「运行中」卡片：第二项标题由「通知使用权限」改为「通知权限」，四项现在都是单行显示，不再折行。\n- 四项权限整体下移 2dp（上边距 12dp → 14dp）。\n- 底部导航栏保持跟随背景色，不再黑条；响铃默认 300 秒循环播放。\n- 安装包签名不变，可直接覆盖安装。"
 }
