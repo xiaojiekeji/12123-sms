@@ -1,8 +1,8 @@
 {
-  "tag": "v1.5.4",
-  "title": "交警信息提醒 1.5.4",
-  "versionCode": 61,
-  "apkUrl": "https://aka.doubaocdn.com/s/rquTsGx57U",
-  "apkName": "jiaojing-1.5.4.apk",
-  "notes": "versionCode: 61\napkMirror: https://aka.doubaocdn.com/s/rquTsGx57U\n\n1.5.4\n\n- 首页「运行中」卡片：第二项标题由「通知使用权限」改为「通知权限」，四项现在都是单行显示，不再折行。\n- 四项权限整体下移 2dp（上边距 12dp → 14dp）。\n- 底部导航栏保持跟随背景色，不再黑条；响铃默认 300 秒循环播放。\n- 安装包签名不变，可直接覆盖安装。"
+  "tag": "v1.5.5",
+  "title": "交警信息提醒 1.5.5",
+  "versionCode": 62,
+  "apkUrl": "https://aka.doubaocdn.com/s/Q3lu2fGPH4",
+  "apkName": "jiaojing-1.5.5.apk",
+  "notes": "versionCode: 62\napkMirror: https://aka.doubaocdn.com/s/Q3lu2fGPH4\n\n1.5.5\n\n- 首页「运行中」卡片：第一项标题由「短信」改为「短信权限」，四项依次为 短信权限 / 通知权限 / 电池优化 / 进程保活。\n- 四项之间拉开 3dp 间距，不再贴在一起；整排再下移 2dp（上边距 14dp → 16dp）。\n- 底部导航栏跟随背景色；响铃默认 300 秒循环播放。\n- 安装包签名不变，可直接覆盖安装。"
 }
