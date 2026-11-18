@@ -1,8 +1,8 @@
 {
-  "tag": "v1.5.7",
-  "title": "交警信息提醒 1.5.7",
-  "versionCode": 64,
-  "apkUrl": "https://aka.doubaocdn.com/s/IVt02i5tVg",
-  "apkName": "jiaojing-1.5.7.apk",
-  "notes": "versionCode: 64\napkMirror: https://aka.doubaocdn.com/s/IVt02i5tVg\n\n1.5.7\n\n- 首页「最近一次触发」与记录页列表的号码，自动去掉 +86 / 0086 前缀，只显示本地号码（如 +8613800138000 → 13800138000）。\n- 短号（121234201、95588 等）保持原样；其他区号（+1、+852）不动。\n- 触发记录原始数据不变，只改展示，历史记录也一并生效。\n- 安装包签名不变，可直接覆盖安装。"
+  "tag": "v1.5.8",
+  "title": "交警信息提醒 1.5.8",
+  "versionCode": 65,
+  "apkUrl": "https://aka.doubaocdn.com/s/a0POZMZNKA",
+  "apkName": "jiaojing-1.5.8.apk",
+  "notes": "versionCode: 65\napkMirror: https://aka.doubaocdn.com/s/a0POZMZNKA\n\n1.5.8\n\n- 首页「最近一次触发」、记录页列表、自定义页「当前触发号码」列表里的号码，全部自动去掉 +86 / 0086 前缀，只显示本地号码。\n- 短号（121234201、95588 等）与其他区号（+1、+852）不动。\n- 只改展示，存储的号码与触发记录原始值不变，删改、匹配逻辑照常。\n- 安装包签名不变，可直接覆盖安装。"
 }
