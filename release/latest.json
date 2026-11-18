@@ -1,8 +1,8 @@
 {
-  "tag": "v1.5.8",
-  "title": "交警信息提醒 1.5.8",
-  "versionCode": 65,
-  "apkUrl": "https://aka.doubaocdn.com/s/a0POZMZNKA",
-  "apkName": "jiaojing-1.5.8.apk",
-  "notes": "versionCode: 65\napkMirror: https://aka.doubaocdn.com/s/a0POZMZNKA\n\n1.5.8\n\n- 首页「最近一次触发」、记录页列表、自定义页「当前触发号码」列表里的号码，全部自动去掉 +86 / 0086 前缀，只显示本地号码。\n- 短号（121234201、95588 等）与其他区号（+1、+852）不动。\n- 只改展示，存储的号码与触发记录原始值不变，删改、匹配逻辑照常。\n- 安装包签名不变，可直接覆盖安装。"
+  "tag": "v1.5.9",
+  "title": "交警信息提醒 1.5.9",
+  "versionCode": 66,
+  "apkUrl": "https://aka.doubaocdn.com/s/Uei6P2EU2U",
+  "apkName": "jiaojing-1.5.9.apk",
+  "notes": "versionCode: 66\napkMirror: https://aka.doubaocdn.com/s/Uei6P2EU2U\n\n1.5.9\n\n- 新增权限看门狗：短信权限 / 通知权限 / 电池优化 / 进程保活四项，一旦被系统或 ROM 收回，直接用 root 静默补回，不再需要手动点。\n- 检测时机：打开应用、每 15 分钟后台巡检（JobScheduler + 盫钟双通道）、开机后。\n- 补回动作走后援路径：pm grant + appops 放行 + 通知使用权列表追加 + deviceidle 白名单 + 活跃 bucket，同时自动拉起守护服务。\n- 修复盫钟链只响一次的问题，现在每轮会自己把下一轮排上。\n- 安装包签名不变，可直接覆盖安装。"
 }
