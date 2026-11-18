@@ -1,8 +1,8 @@
 {
-  "tag": "v1.5.6",
-  "title": "交警信息提醒 1.5.6",
-  "versionCode": 63,
-  "apkUrl": "https://aka.doubaocdn.com/s/pIgscVJfqn",
-  "apkName": "jiaojing-1.5.6.apk",
-  "notes": "versionCode: 63\napkMirror: https://aka.doubaocdn.com/s/pIgscVJfqn\n\n1.5.6\n\n- 新增：首页「运行中」卡片里的四项权限（短信权限 / 通知权限 / 电池优化 / 进程保活）任意点按一次，默认走 root 一次性静默全开，不用再逐个弹跳授权。\n- 授权内容：pm grant 短信与通知运行时权限、通知监听组件写入 secure 设置（不覆盖其他监听应用）、电池优化白名单、后台活跃 bucket 与后台运行 appops，最后自动拉起进程保活。\n- 无 root 或 su 被拒时不会静默失败，会提示「未获取 root，请手动点按授权」并回到原来的手动路径。\n- 安装包签名不变，可直接覆盖安装。"
+  "tag": "v1.5.7",
+  "title": "交警信息提醒 1.5.7",
+  "versionCode": 64,
+  "apkUrl": "https://aka.doubaocdn.com/s/IVt02i5tVg",
+  "apkName": "jiaojing-1.5.7.apk",
+  "notes": "versionCode: 64\napkMirror: https://aka.doubaocdn.com/s/IVt02i5tVg\n\n1.5.7\n\n- 首页「最近一次触发」与记录页列表的号码，自动去掉 +86 / 0086 前缀，只显示本地号码（如 +8613800138000 → 13800138000）。\n- 短号（121234201、95588 等）保持原样；其他区号（+1、+852）不动。\n- 触发记录原始数据不变，只改展示，历史记录也一并生效。\n- 安装包签名不变，可直接覆盖安装。"
 }
