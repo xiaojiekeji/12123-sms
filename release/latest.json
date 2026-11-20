@@ -1,8 +1,8 @@
 {
-  "tag": "v1.5.12",
-  "title": "交警信息提醒 1.5.12",
-  "versionCode": 69,
-  "apkUrl": "https://aka.doubaocdn.com/s/LhL6Z3Cbjr",
-  "apkName": "jiaojing-1.5.12.apk",
-  "notes": "versionCode: 69\napkMirror: https://aka.doubaocdn.com/s/LhL6Z3Cbjr\n\n1.5.12\n\n- 权限守护不再依赖 Magisk：同一套模块同时适配 KernelSU 系（KernelSU / ReSukiSU / SukiSU）、APatch、Magisk，三者的 /data/adb/modules + service.sh 语义一致。\n- 巡检间隔 90 秒 → 20 秒，锁屏后无障碍被清掉最多 20 秒补回。\n- 新增 post-fs-data.sh / boot-completed.sh：开机完成后再补一次，专门应对「开机后才做权限清理」的 ROM。\n- 根治「锁屏后进程被冻结」：守护脚本关闭 cached_apps_freezer、app_standby_enabled、adaptive_battery_management_enabled，并补 WAKE_LOCK / START_FOREGROUND appops。\n- service.sh 加去重保护：已在跑就不再叠加第二个 guard。\n- 设置页新增「无障碍掉线诊断」：一次性采集 ROM 指纹、secure 设置、dumpsys 无障碍状态、冻结开关、崩溃日志、补权次数，直接给中文结论并可一键复制，不用连电脑。\n- 日志：/data/local/tmp/12123sms_perm_guard.log。安装包签名不变，可覆盖安装。"
+  "tag": "v1.5.13",
+  "title": "交警信息提醒 1.5.13",
+  "versionCode": 70,
+  "apkUrl": "https://aka.doubaocdn.com/s/lyubQTSfsc",
+  "apkName": "jiaojing-1.5.13.apk",
+  "notes": "versionCode: 70\napkMirror: https://aka.doubaocdn.com/s/lyubQTSfsc\n\n1.5.13\n\n- 修复诊断误判：诊断脚本改为先 base64 落盘再 su -c sh 执行，避免长脚本在 ReSukiSU/KernelSU 的 su 里被引号吃掉（旧版 settings/getprop 段全空，导致结论错判成「无障碍异常」）。\n- 新增掉线时间线：守护脚本每次巡检记录 mWakefulness，并记录 a11y LOST / a11y back / force rebind，可以把「锁屏」和「掉无障碍」精确对齐。\n- 守护脚本加单实例锁（/data/local/tmp/12123sms_perm_guard.lock），避免 App、service.sh、开机三条路径同时拉起多个 guard 互相覆盖写入。\n- 列表里有名字但进程已死时（有名字没干活）主动 toggle 一次 accessibility_enabled，强制系统重新绑定。\n- 额外关闭 auto_revoke_permissions。\n- 诊断新增 SELinux、桌面/管家类系统包清单、root 管理器包清单，便于判断是 ROM 级清理还是应用侧。\n- 安装包签名不变，可覆盖安装。"
 }
