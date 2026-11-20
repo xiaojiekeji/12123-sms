@@ -1,8 +1,8 @@
 {
-  "tag": "v1.5.9",
-  "title": "交警信息提醒 1.5.9",
-  "versionCode": 66,
-  "apkUrl": "https://aka.doubaocdn.com/s/Uei6P2EU2U",
-  "apkName": "jiaojing-1.5.9.apk",
-  "notes": "versionCode: 66\napkMirror: https://aka.doubaocdn.com/s/Uei6P2EU2U\n\n1.5.9\n\n- 新增权限看门狗：短信权限 / 通知权限 / 电池优化 / 进程保活四项，一旦被系统或 ROM 收回，直接用 root 静默补回，不再需要手动点。\n- 检测时机：打开应用、每 15 分钟后台巡检（JobScheduler + 盫钟双通道）、开机后。\n- 补回动作走后援路径：pm grant + appops 放行 + 通知使用权列表追加 + deviceidle 白名单 + 活跃 bucket，同时自动拉起守护服务。\n- 修复盫钟链只响一次的问题，现在每轮会自己把下一轮排上。\n- 安装包签名不变，可直接覆盖安装。"
+  "tag": "v1.5.10",
+  "title": "交警信息提醒 1.5.10",
+  "versionCode": 67,
+  "apkUrl": "https://aka.doubaocdn.com/s/R5NXVpgTqV",
+  "apkName": "jiaojing-1.5.10.apk",
+  "notes": "versionCode: 67\napkMirror: https://aka.doubaocdn.com/s/R5NXVpgTqV\n\n1.5.10\n\n- 新增无障碍保活：应用内自带一个保活型无障碍服务（不读取屏幕内容、事件直接丢弃），锁屏后不容易被回收；被系统关掉后由 root 静默重新开启。\n- 新增 root 级巡检守护：向 Magisk service.d 写入 shell 脚本，每 90 秒自检一次，短信权限 / 通知使用权 / 无障碍开关与组件 / 电池优化 / 活跃 bucket 缺哪个补哪个。Magisk 会在开机时自动跑，应用被强杀也不影响。\n- 没有 Magisk 时退化为 /data/local/tmp 下的后台脚本（本轮到重启），重启后由开机广播与应用内巡检重新拉起。\n- PermissionGuard 检查项由 4 项扩到 5 项（加无障碍）；打开应用时若发现被回收会立即用 root 补回并 toast 提示。\n- 安装包签名不变，可直接覆盖安装。"
 }
