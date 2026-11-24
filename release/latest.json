@@ -1,8 +1,8 @@
 {
-  "tag": "v1.5.13",
-  "title": "交警信息提醒 1.5.13",
-  "versionCode": 70,
-  "apkUrl": "https://aka.doubaocdn.com/s/lyubQTSfsc",
-  "apkName": "jiaojing-1.5.13.apk",
-  "notes": "versionCode: 70\napkMirror: https://aka.doubaocdn.com/s/lyubQTSfsc\n\n1.5.13\n\n- 修复诊断误判：诊断脚本改为先 base64 落盘再 su -c sh 执行，避免长脚本在 ReSukiSU/KernelSU 的 su 里被引号吃掉（旧版 settings/getprop 段全空，导致结论错判成「无障碍异常」）。\n- 新增掉线时间线：守护脚本每次巡检记录 mWakefulness，并记录 a11y LOST / a11y back / force rebind，可以把「锁屏」和「掉无障碍」精确对齐。\n- 守护脚本加单实例锁（/data/local/tmp/12123sms_perm_guard.lock），避免 App、service.sh、开机三条路径同时拉起多个 guard 互相覆盖写入。\n- 列表里有名字但进程已死时（有名字没干活）主动 toggle 一次 accessibility_enabled，强制系统重新绑定。\n- 额外关闭 auto_revoke_permissions。\n- 诊断新增 SELinux、桌面/管家类系统包清单、root 管理器包清单，便于判断是 ROM 级清理还是应用侧。\n- 安装包签名不变，可覆盖安装。"
+  "tag": "v1.5.14",
+  "title": "交警信息提醒 1.5.14",
+  "versionCode": 71,
+  "apkUrl": "https://aka.doubaocdn.com/s/sw1eKhYf7q",
+  "apkName": "jiaojing-1.5.14.apk",
+  "notes": "versionCode: 71\napkMirror: https://aka.doubaocdn.com/s/sw1eKhYf7q\n\n1.5.14\n\n- 触发链路全阶段时间线埋点：rx-broadcast / broadcast-match / hook / db-hit / service-start / fgs-posted / fire / playback，每条带毫秒时间戳落盘；诊断导出时一并带出。\n- 服务启动时记录端到端延迟（源头解析时刻 → 服务拉起时刻），卡片来源标签显示 hook Δxs，直接看出是投递晚了还是播放晚了。\n- 响铃期间持 PARTIAL_WAKE_LOCK，防止休眠把进程/音频挂住；起播前抢闹钟音频焦点。\n- 短信库命中用短信库里的原始时间戳算延迟，不再按扫描时刻兜底。\n- 诊断报告新增 TRACE 触发时间线与 GUARD EVENTS 守护事件两段。\n- 安装包签名不变，可覆盖安装。"
 }
