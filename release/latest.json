@@ -1,8 +1,8 @@
 {
-  "tag": "v1.5.14",
-  "title": "交警信息提醒 1.5.14",
-  "versionCode": 71,
-  "apkUrl": "https://aka.doubaocdn.com/s/sw1eKhYf7q",
-  "apkName": "jiaojing-1.5.14.apk",
-  "notes": "versionCode: 71\napkMirror: https://aka.doubaocdn.com/s/sw1eKhYf7q\n\n1.5.14\n\n- 触发链路全阶段时间线埋点：rx-broadcast / broadcast-match / hook / db-hit / service-start / fgs-posted / fire / playback，每条带毫秒时间戳落盘；诊断导出时一并带出。\n- 服务启动时记录端到端延迟（源头解析时刻 → 服务拉起时刻），卡片来源标签显示 hook Δxs，直接看出是投递晚了还是播放晚了。\n- 响铃期间持 PARTIAL_WAKE_LOCK，防止休眠把进程/音频挂住；起播前抢闹钟音频焦点。\n- 短信库命中用短信库里的原始时间戳算延迟，不再按扫描时刻兜底。\n- 诊断报告新增 TRACE 触发时间线与 GUARD EVENTS 守护事件两段。\n- 安装包签名不变，可覆盖安装。"
+  "tag": "v1.5.15",
+  "title": "交警信息提醒 1.5.15",
+  "versionCode": 72,
+  "apkUrl": "https://aka.doubaocdn.com/s/hig97f5ARR",
+  "apkName": "jiaojing-1.5.15.apk",
+  "notes": "versionCode: 72\napkMirror: https://aka.doubaocdn.com/s/hig97f5ARR\n\n1.5.15\n\n- 去重改为「号码+正文」30 分钟窗口：hook/广播先响过后，短信库兜底晚到十几分钟再扫到同一条不会二次响铃。\n- hook 侧内存去重：createFromPdu 分片与重复回调 30 秒内只转发一次，消除重复拉起服务的洪水。\n- 短信库扫描前先比对近期记录，已响过的同一条只记 db-dup，不再拉起服务。\n- 播放器补埋点：音频焦点结果、闹钟音量/静音状态、起播成功或失败原因，下次延迟可直接看出是没抢到焦点还是音源起不来。\n- 安装包签名不变，可覆盖安装。"
 }
